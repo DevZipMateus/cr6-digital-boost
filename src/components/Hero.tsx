@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-hero"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80"></div>
       
       {/* Overlay Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
@@ -44,14 +44,15 @@ const Hero = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
                 <Button 
-                  className="btn-hero bg-white text-primary hover:bg-white/90"
+                  className="bg-white text-primary hover:bg-white/90"
                   onClick={() => scrollToSection('servicos')}
                 >
                   Nossos Serviços
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
                 <Button 
-                  className="btn-secondary text-white border-white/60 hover:bg-white hover:text-primary"
+                  variant="outline"
+                  className="text-white border-white/60 hover:bg-white hover:text-primary"
                   onClick={() => scrollToSection('contato')}
                 >
                   Fale Conosco

@@ -9,10 +9,10 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Sobre a <span className="gradient-text">CR6 Consultoria</span>
             </h2>
-            <p className="section-subtitle">
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Escritório de inteligência fiscal e know-how de profissionais com anos de experiência 
               no mercado tributário empresarial, com objetivo pleno de oferecer resultados exigidos 
               pelo mercado empresarial.
@@ -35,7 +35,7 @@ const About = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" aria-hidden="true" />
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Análises Técnicas</h4>
                       <p className="text-muted-foreground text-sm">
@@ -45,7 +45,7 @@ const About = () => {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" aria-hidden="true" />
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Gestão Estratégica</h4>
                       <p className="text-muted-foreground text-sm">
@@ -55,7 +55,7 @@ const About = () => {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" aria-hidden="true" />
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Segurança das Informações</h4>
                       <p className="text-muted-foreground text-sm">
@@ -70,19 +70,19 @@ const About = () => {
             {/* Right Content - Stats */}
             <div className="animate-slide-up">
               <div className="grid grid-cols-2 gap-6">
-                <div className="bg-gradient-primary rounded-xl p-6 text-white text-center">
+                <div className="bg-gradient-primary rounded-xl p-6 text-white text-center" role="img" aria-label="10 anos de experiência">
                   <div className="text-3xl font-bold mb-2">10+</div>
                   <div className="text-white/90 text-sm">Anos de Experiência</div>
                 </div>
-                <div className="bg-gradient-accent rounded-xl p-6 text-white text-center">
+                <div className="bg-gradient-accent rounded-xl p-6 text-white text-center" role="img" aria-label="500 clientes atendidos">
                   <div className="text-3xl font-bold mb-2">500+</div>
                   <div className="text-white/90 text-sm">Clientes Atendidos</div>
                 </div>
-                <div className="bg-corporate rounded-xl p-6 text-white text-center">
+                <div className="bg-corporate rounded-xl p-6 text-white text-center" role="img" aria-label="100% de segurança">
                   <div className="text-3xl font-bold mb-2">100%</div>
                   <div className="text-white/90 text-sm">Segurança</div>
                 </div>
-                <div className="bg-success rounded-xl p-6 text-white text-center">
+                <div className="bg-success rounded-xl p-6 text-white text-center" role="img" aria-label="Suporte 24 horas por dia">
                   <div className="text-3xl font-bold mb-2">24/7</div>
                   <div className="text-white/90 text-sm">Suporte</div>
                 </div>
@@ -95,7 +95,7 @@ const About = () => {
             {/* Missão */}
             <div className="text-center animate-scale-in">
               <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Nossa Missão</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -107,7 +107,7 @@ const About = () => {
             {/* Visão */}
             <div className="text-center animate-scale-in">
               <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Eye className="w-8 h-8 text-white" />
+                <Eye className="w-8 h-8 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Nossa Visão</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -119,7 +119,7 @@ const About = () => {
             {/* Valores */}
             <div className="text-center animate-scale-in">
               <div className="w-16 h-16 bg-corporate rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-white" />
+                <Heart className="w-8 h-8 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Nossos Valores</h3>
               <p className="text-muted-foreground leading-relaxed">

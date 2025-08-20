@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -52,10 +52,10 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Entre em <span className="gradient-text">Contato</span>
             </h2>
-            <p className="section-subtitle">
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Estamos prontos para atender você e oferecer as melhores soluções 
               em consultoria tributária para sua empresa.
             </p>
@@ -72,25 +72,31 @@ const Contact = () => {
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-white" />
+                      <MapPin className="w-6 h-6 text-white" aria-hidden="true" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Endereço</h4>
-                      <p className="text-muted-foreground">
+                      <address className="text-muted-foreground not-italic">
                         RUA M (LOT POLTRONIERI), 416<br />
                         B. LIVERDADE - CEP: 99.706-044<br />
                         ERECHIM/RS
-                      </p>
+                      </address>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-white" />
+                      <Phone className="w-6 h-6 text-white" aria-hidden="true" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
-                      <p className="text-muted-foreground">(54) 9 9957-1408</p>
+                      <a 
+                        href="tel:5554999571408"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        (54) 9 9957-1408
+                      </a>
+                      <br />
                       <a 
                         href="https://wa.me/5554999571408" 
                         target="_blank" 
@@ -104,7 +110,7 @@ const Contact = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-corporate rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-white" />
+                      <Mail className="w-6 h-6 text-white" aria-hidden="true" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">E-mail</h4>
@@ -119,7 +125,7 @@ const Contact = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-success rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-white" />
+                      <Clock className="w-6 h-6 text-white" aria-hidden="true" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Horário de Atendimento</h4>
@@ -176,6 +182,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder="Seu nome completo"
                         className="w-full"
+                        aria-describedby="name-error"
                       />
                     </div>
                     <div>
@@ -191,6 +198,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder="seu@email.com"
                         className="w-full"
+                        aria-describedby="email-error"
                       />
                     </div>
                   </div>
@@ -223,6 +231,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder="Assunto da mensagem"
                         className="w-full"
+                        aria-describedby="subject-error"
                       />
                     </div>
                   </div>
@@ -240,6 +249,7 @@ const Contact = () => {
                       placeholder="Descreva como podemos ajudá-lo..."
                       rows={6}
                       className="w-full"
+                      aria-describedby="message-error"
                     />
                   </div>
 
@@ -250,12 +260,12 @@ const Contact = () => {
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" aria-hidden="true"></div>
                         Enviando...
                       </>
                     ) : (
                       <>
-                        <Send className="w-5 h-5 mr-2" />
+                        <Send className="w-5 h-5 mr-2" aria-hidden="true" />
                         Enviar Mensagem
                       </>
                     )}
@@ -270,7 +280,7 @@ const Contact = () => {
             <div className="bg-card rounded-2xl p-4 shadow-lg border border-border">
               <div className="aspect-video w-full rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.8765432109876!2d-52.2743!3d-27.6336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM4JzAxLjAiUyA1MsKwMTYnMjcuNSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.123456789!2d-52.2743!3d-27.6336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM4JzAxLjAiUyA1MsKwMTYnMjcuNSJX!5e0!3m2!1spt-BR!2sbr!4v1642789012345"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

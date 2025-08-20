@@ -84,10 +84,10 @@ const Services = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="section-title">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Nossos <span className="gradient-text">Serviços</span>
             </h2>
-            <p className="section-subtitle">
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Oferecemos um portfólio completo de serviços especializados em consultoria tributária 
               e gestão empresarial, sempre focados em gerar resultados para nossos clientes.
             </p>
@@ -96,10 +96,10 @@ const Services = () => {
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <div key={index} className="service-card animate-slide-up">
+              <article key={index} className="service-card animate-slide-up">
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-6 h-6 text-white" />
+                    <service.icon className="w-6 h-6 text-white" aria-hidden="true" />
                   </div>
                   
                   <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -110,16 +110,16 @@ const Services = () => {
                     {service.description}
                   </p>
                   
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" role="list">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0" aria-hidden="true"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 
@@ -145,7 +145,7 @@ const Services = () => {
                   href="https://wa.me/5554999571408" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white border-2 border-white/60 rounded-lg hover:bg-white hover:text-primary transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border-2 border-white/60 rounded-lg hover:bg-white hover:text-primary transition-all duration-300"
                 >
                   WhatsApp
                 </a>

@@ -2,4 +2,18 @@
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://www.cr6consultoria.com.br/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /#sobre
+Allow: /#servicos  
+Allow: /#contato
+
+# Crawl delay
+Crawl-delay: 1

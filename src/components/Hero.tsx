@@ -12,9 +12,19 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Pattern */}
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/10a45b36-9813-4106-ba5b-fb4a27d6f242.png')`
+        }}
+      ></div>
+      
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-overlay"></div>
+      
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
         <div className="absolute top-40 right-20 w-24 h-24 border border-white/20 rounded-full"></div>
